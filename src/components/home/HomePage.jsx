@@ -14,16 +14,18 @@ const HomePage = () => {
 
   return (
     <div className="home">
-      <NavBar/>
-      <div className="background-video">
+      <NavBar />
+      <div className="video-container">
         <video autoPlay loop muted>
           <source src={videoBg} type="video/mp4" />
         </video>
+      </div>
+      <div className="text-container">
         <div className="text-overlay">
           <div className="welcome-section">
-          <div className="profile-pic">
-            <img src={profilePic} alt="Profile picture of the website owner" className="round-profile-pic" />
-          </div>
+            <div className="profile-pic">
+              <img src={profilePic} alt="Profile picture of the website owner" className="round-profile-pic" />
+            </div>
             <h1>Welcome to my Portfolio!</h1>
             {showText && (
               <>
@@ -37,7 +39,6 @@ const HomePage = () => {
               </>
             )}
           </div>
-          
         </div>
       </div>
     </div>
@@ -49,9 +50,9 @@ const Main = () => {
     <div>
       <HomePage />
       <About />
-      <Project/>
-      <Experience/>
-      <Contact/>
+      <Project />
+      <Experience />
+      <Contact />
     </div>
   );
 };
